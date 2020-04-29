@@ -2,7 +2,7 @@
 This tutorial meant to be step by step guide to help people setup their own k8s cluster on AWS ( not EKS )
 
 ## Resources 
-The list is very long, please see \
+The list is very long, please see
 - https://github.com/howtoclient/aws-kops-instalation/blob/master/resources.md
 
 ## First things first, setup your environment
