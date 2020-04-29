@@ -17,6 +17,11 @@ You can follow one of those instructions for your platform, or install yourself.
 - Linux - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-linux.md
 - MacOS - https://github.com/howtoclient/aws-kops-instalation/blob/master/setup-mac-os.md
 
+##Configure helm
+Its important to add standard charts to helm using
+- ``helm repo add stable http://storage.googleapis.com/kubernetes-charts``
+- ``helm repo update``
+
 ## Setup AWS account and permissions
 NOTE: I am going to use Administrator Level access because its easy to setup. This is not recommended for production and you should create user with appropriate permissions later on. \
 Create IAM programmatic account with the following permissions:

@@ -28,7 +28,8 @@
   - secrets - https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/
   - routing - https://kubernetes.io/docs/concepts/services-networking/ingress/
   - external name - https://github.com/nginxinc/kubernetes-ingress/tree/master/examples/externalname-services
- 
+- auto-scaler - https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md
+
 ## Ingress
 - ingress-nxinx - https://github.com/kubernetes/kops/tree/master/addons/ingress-nginx
 - external dns add-on - https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/aws.md
