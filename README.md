@@ -101,8 +101,11 @@ This is the easiest way i found to setup KOPs based k8s cluster and configure it
 
 So whats next?
 There are 3 more steps for getting this cluster not just running but also useful for development and cheap to run, since the cluster is setup order of execution doesnt really matter and you can also skip steps you dont think are necessary
-- #### Auto CI-CD deployment - https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-auto-deployment-with-bitbucket.md
-- #### Spot instances - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-spot-instances.md
-- #### Access internal services through VPN - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-ovpn-on-kops.md
+- #### Auto CI-CD deployment
+  - https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-auto-deployment-with-bitbucket.md
+- #### Spot instances
+   - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-spot-instances.md
+- #### Access internal services through VPN 
+   - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-ovpn-on-kops.md
 
 I hope it helps to get started with K8s at its full potential. I will update this article with my monthly bill for this type of Cluster.
