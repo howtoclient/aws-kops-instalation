@@ -73,7 +73,7 @@ I am going to use the following parameters:
 
 Lets begin:
 - Open your Terminal ( linux or otherwise )
-- ``kops  create cluster --name=cluster.ratchet.gg --master-size=t2.medium --master-zones=eu-central-1a --zones=eu-central-1a,eu-central-1b,eu-central-1c --yes``
+- ```kops  create cluster --name=cluster.ratchet.gg --master-size=t2.medium --master-zones=eu-central-1a --zones=eu-central-1a,eu-central-1b,eu-central-1c --yes```
 - Cluster deployment will take **10-20 minutes**, check status with ``kops validate cluster``
 - You can see the cluster deploying in AWS account in EC2 instances, route 53, Auto Scaling groups, Load balancers etc
 
