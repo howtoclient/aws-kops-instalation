@@ -2,16 +2,8 @@
 This tutorial meant to be step by step guide to help people setup their own k8s cluster on AWS ( not EKS )
 
 ## Resources 
-https://docs.microsoft.com/en-us/windows/wsl/install-win10
-https://linuxhint.com/install_aws_cli_ubuntu/
-https://kubernetes.io/docs/tasks/tools/install-kubectl/
-https://kubernetes.io/docs/setup/production-environment/tools/kops/
-https://helm.sh/docs/intro/install/
-https://docs.aws.amazon.com/general/latest/gr/rande.html
-https://brew.sh/
-https://formulae.brew.sh/formula/awscli
-https://github.com/jsonmaur/aws-regions
-https://github.com/kubernetes/kops/blob/master/docs/cli/kops_create_cluster.md
+The list is very long, please see \
+- https://github.com/howtoclient/aws-kops-instalation/blob/master/resources.md
 
 ## First things first, setup your environment
 We will need:
@@ -82,4 +74,25 @@ NOTES:
 - Without `--yes` it will apply the config but wont actually deploy. Its useful for testing new configs but this is a new cluster so i dont need to test.
 - In case you want to change settings you can run ``kops delete cluster CLUSTERNAME [--yes]``
 
+## Setting up Kubernetic
+A very useful GUI tool for kubernetes that we will be using to setup our auto-deploy example
+Download the tool from https://kubernetic.com/, it should start right up.
+- If you are using Unbuntu app on windows please see:
+  - https://github.com/howtoclient/aws-kops-instalation/blob/master/kubernetic-linux-windows.md
 
+## Setting up Ingress-nginx on your Cluster
+To easily expose services and connect sub-domains i am going to use nginx-ingress
+
+- Open your Terminal ( linux or otherwise )
+- ``kubectl apply -f https://raw.githubusercontent.com/kubernetes/kops/master/addons/ingress-nginx/v1.6.0.yaml``
+- Go to aws console. Navigate to Services -> EC2 -> Load Balancers, You should see a load balancer there
+- Copy the "DNS name"
+- Navigate to Services -> Route53 -> Hosted Zones. Click on your hosted zone
+- Add two A records
+  - click on "Create Record Set"
+  - for main domain leave Name empty
+  - Select Alias - yes
+  - Paste the Load balancer URL you copied
+  - Click Create
+  - Repeat for `*.example.com` ( set Name = `*` )
+  
