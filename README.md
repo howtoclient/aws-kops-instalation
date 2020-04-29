@@ -62,9 +62,23 @@ Replace the email with your email, click enter until its generated \
 NOTE: If you changed default public key url you will ahve to use `--ssh-public-key ~/path` when creating the k8s Cluster
 
 ## Creating your first Kubernetes Cluster on AWS
-We are going to creating the default cluster ( 1 master and 2 nodes )
+We are going to creating the default cluster ( 1 master and 2 nodes ) \
 I compiled a list of KOPs note-worthy options here - https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-options.md
+
+I am going to use the following parameters:
+- ``--name cluster.example.com`` - not related to S3 bucket name
+- ``--master-size t2.medium`` - I want cluster for testing
+- ``--master-zones eu-central-1a`` - single zone for 1 master ( its 1 by default )
+- ``--zones  eu-central-1a,eu-central-1b,eu-central-1c `` - I am going with spot instances, multiple regions is recommended
 
 Lets begin:
 - Open your Terminal ( linux or otherwise )
+- ``kops  create cluster --name=cluster.ratchet.gg --master-size=t2.medium --master-zones=eu-central-1a --zones=eu-central-1a,eu-central-1b,eu-central-1c --yes``
+- Cluster deployment will take **10-20 minutes**, check status with ``kops validate cluster``
+- You can see the cluster deploying in AWS account in EC2 instances, route 53, Auto Scaling groups, Load balancers etc
+
+NOTES:
+- Without `--yes` it will apply the config but wont actually deploy. Its useful for testing new configs but this is a new cluster so i dont need to test.
+- In case you want to change settings you can run ``kops delete cluster CLUSTERNAME [--yes]``
+
 
