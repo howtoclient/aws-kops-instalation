@@ -95,6 +95,7 @@ To easily expose services and connect sub-domains i am going to use nginx-ingres
   - Paste the Load balancer URL you copied
   - Click Create
   - Repeat for `*.example.com` ( set Name = `*` )
+- Alternatively you can point your Domain to Cloud Flare and add the `A records` for `example.com` and `*.example.com` there.
   
 ## Conclusion and next steps
 This is the easiest way i found to setup KOPs based k8s cluster and configure it to work withing a short amount of time and with a minimal expenses.
