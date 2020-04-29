@@ -1,4 +1,4 @@
-# aws-kops-windows
+# Installing Kubernetes Cluster (k8s) on AWS platform
 This tutorial meant to be step by step guide to help people setup their own k8s cluster on AWS ( not EKS )
 
 ## Resources 
