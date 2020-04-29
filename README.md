@@ -14,6 +14,7 @@ You can follow one of those instructions for your platform, or install yourself.
 - MacOS - https://github.com/howtoclient/aws-kops-instalation/blob/master/setup-mac-os.md
 
 ## Setup AWS account and permissions
+NOTE: I am going to use Administrator Level access because its easy to setup. This is not recommended for production and you should create user with appropriate permissions later on. \
 Create IAM programmatic account with the following permissions:
 - AmazonEC2FullAccess
 - AmazonRoute53FullAccess
