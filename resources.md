@@ -32,3 +32,7 @@
 ## Ingress
 - ingress-nxinx - https://github.com/kubernetes/kops/tree/master/addons/ingress-nginx
 - external dns add-on - https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/aws.md
+
+## nodejs sample projects
+- express hello world - https://expressjs.com/en/starter/hello-world.html
+- nodejs-hello - https://github.com/howtoclient/nodejs-hello
