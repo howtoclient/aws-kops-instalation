@@ -54,11 +54,21 @@ Well we have spot instances with between 1 and 4 but how will kops know when to 
     - Login to your aws console and navigate to "Services" -> EC2 -> "Auto Scaling Groups"
     - Copy the name of our `spot-ig` group
   - Open terminal
-    - 
-  - ``kubectl apply -f https://raw.githubusercontent.com/howtoclient/nodejs-hello/master/kops-auto-scaler.yml``
+    - ``wget https://raw.githubusercontent.com/howtoclient/aws-kops-instalation/master/kops-auto-scaler.yml``
+    - ``nano kops-auto-scaler.yml`` and at the bottom change `spot-ig.cluster.example.com` to your auto scale group name
+    - do `ctrl + x` then `y` and hit `Enter`
+  - now run ``kubectl apply -f kops-auto-scaler.yml``
   
 ## Testing auto scaler
+**NOTE: Sometimes your aws account might get a limit of 1 spot instance ( this was my case ) and you will have to contact the aws support team.
+You can see if this is the case in Services -> EC2 -> Auto Scaling Groups -> spot-ig under Activity History**
+
+Now lets bring in the heat! Scale our service to 60 \
+NOTE:  scaling with spot instances might take a few minutes
 - ``kubectl scale deployment nodejs-hello --replicas=60``
+  - to restore run - ``kubectl scale deployment nodejs-hello --replicas=2``
+- While this is running you can see in aws console that the instance group Desired instances count changed to  more than 1
+- Wait for it to stabilize and then set replicas to 2 to check scaling down
 
 ## Spot instance yml config example
 ```yaml
