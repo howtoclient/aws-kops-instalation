@@ -63,7 +63,8 @@ NOTE: If you changed default public key url you will ahve to use `--ssh-public-k
 
 ## Creating your first Kubernetes Cluster on AWS
 We are going to creating the default cluster ( 1 master and 2 nodes ) \
-I compiled a list of KOPs note-worthy options here - https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-options.md
+I compiled a list of KOPs note-worthy options here:
+- https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-options.md
 
 I am going to use the following parameters:
 - ``--name cluster.example.com`` - not related to S3 bucket name
