@@ -1,4 +1,4 @@
-# Setup tools and environment on windows 10
+# Setup tools and environment on Linux ( ubuntu 18 )
 I didnt go into depth looking for easier ways, Its the same as windows ubuntu app :)
 
 ## resources:
@@ -6,6 +6,7 @@ I didnt go into depth looking for easier ways, Its the same as windows ubuntu ap
 - https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - https://kubernetes.io/docs/setup/production-environment/tools/kops/
 - https://helm.sh/docs/intro/install/
+- https://docs.brew.sh/Homebrew-on-Linux
 
 ## Step 1: Gather all the tools you need:
 - awscli - needed to be able to access our AWS cloude
@@ -50,5 +51,13 @@ To make sure everything runs properly i highly recommend to restart your PC, ent
 - ``kubectl version --client`` - my version for this tutorial is `v1.18.2`
 - ``kops version`` - my version for this tutorial is `1.16.1`
 - ``helm version`` - my version for this tutorial is `v3.2.0`
+
+
+### Alternatively you can install Homebrew 
+( dont forget to configure paths ) and use that to install https://docs.brew.sh/Homebrew-on-Linux
+- ``brew install awscli``
+- ``brew install kubectl``
+- ``brew install kops``
+- ``brew install heml``
 
 Congrats! Now you have linux running on your Windows machine and you can move to the next step!
