@@ -88,9 +88,9 @@ To easily expose services and connect sub-domains i am going to use nginx-ingres
 - Go to aws console. Navigate to Services -> EC2 -> Load Balancers, You should see a load balancer there
 - Copy the "DNS name"
 - Navigate to Services -> Route53 -> Hosted Zones. Click on your hosted zone
-- Add two A records
+- Add two A records for `example.com` and `*.example.com`
   - click on "Create Record Set"
-  - for main domain leave Name empty
+  - for main domain leave Name empty ( for `example.com` )
   - Select Alias - yes
   - Paste the Load balancer URL you copied
   - Click Create
