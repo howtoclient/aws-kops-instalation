@@ -13,6 +13,7 @@
 - aws sub regions - https://github.com/jsonmaur/aws-regions
 - create cluster - https://github.com/kubernetes/kops/blob/master/docs/cli/kops_create_cluster.md
 - ingress nginx - https://github.com/kubernetes/kops/tree/master/addons/ingress-nginx
+- openvpn - https://github.com/helm/charts/tree/master/stable/openvpn
 
 ## Auto deployment tools
 - bitbucket - https://bitbucket.org/ 
