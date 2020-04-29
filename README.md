@@ -1,6 +1,18 @@
 # aws-kops-windows
 This tutorial meant to be step by step guide to help people setup their own k8s cluster on AWS ( not EKS )
 
+## Resources 
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://linuxhint.com/install_aws_cli_ubuntu/
+https://kubernetes.io/docs/tasks/tools/install-kubectl/
+https://kubernetes.io/docs/setup/production-environment/tools/kops/
+https://helm.sh/docs/intro/install/
+https://docs.aws.amazon.com/general/latest/gr/rande.html
+https://brew.sh/
+https://formulae.brew.sh/formula/awscli
+https://github.com/jsonmaur/aws-regions
+https://github.com/kubernetes/kops/blob/master/docs/cli/kops_create_cluster.md
+
 ## First things first, setup your environment
 We will need:
 - aws cli
@@ -32,7 +44,7 @@ Now lets make sure we have the right access and state store for our deployment. 
 Configure KOPs Store
 - Open your Terminal ( linux or otherwise )
 - run `export KOPS_STATE_STORE=s3://clusters.example.com`
-- Add permanent path for Linux:  `echo 'export KOPS_STATE_STORE=s3://clusters.example.com' | sudo tee -a /etc/bash.bashrc` \
+- Add permanent path for Linux:  `echo 'export KOPS_STATE_STORE=s3://clusters.example.com' | sudo tee -a /etc/bash.bashrc`
 
 Configure aws cli
 - Open your Terminal ( linux or otherwise )
@@ -48,4 +60,11 @@ Create SSH key ( needed for KOPs connection to cluster )
 - `ssh-keygen -t rsa -b 4096 -C "your@email.com"` \
 Replace the email with your email, click enter until its generated \
 NOTE: If you changed default public key url you will ahve to use `--ssh-public-key ~/path` when creating the k8s Cluster
+
+## Creating your first Kubernetes Cluster on AWS
+We are going to creating the default cluster ( 1 master and 2 nodes )
+I compiled a list of KOPs note-worthy options here - https://github.com/howtoclient/aws-kops-instalation/blob/master/kops-options.md
+
+Lets begin:
+- Open your Terminal ( linux or otherwise )
 
