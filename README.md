@@ -17,7 +17,7 @@ You can follow one of those instructions for your platform, or install yourself.
 - Linux - https://github.com/howtoclient/aws-kops-instalation/blob/master/setting-up-linux.md
 - MacOS - https://github.com/howtoclient/aws-kops-instalation/blob/master/setup-mac-os.md
 
-##Configure helm
+## Configure helm
 Its important to add standard charts to helm using
 - ``helm repo add stable http://storage.googleapis.com/kubernetes-charts``
 - ``helm repo update``
