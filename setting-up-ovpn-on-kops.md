@@ -11,7 +11,9 @@ What i am going to do is setup Open VPN on my cluster in the `default` namespace
 
 ## Install open vpn on cluster
 - ``helm install stable/openvpn --namespace "default" -g``
-  - NOTE: This will create load balancer, I havent figured a way to set it up without load balancer yet
+  - NOTES:
+    - NOTE: It takes a while for the VPN to create all its keys
+    - NOTE: This will create load balancer, I havent figured a way to set it up without load balancer yet.
   - You can also set it up in its own namespace and use `externalName` to expose services to its namespace
   - You can do that by adding another service that exposes the original service
     - https://github.com/howtoclient/nodejs-hello/blob/master/k8s-template/service-external.yml
