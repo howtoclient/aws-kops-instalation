@@ -10,7 +10,8 @@ What i am going to do is setup Open VPN on my cluster in the `default` namespace
 - Linux - https://openvpn.net/vpn-server-resources/connecting-to-access-server-with-linux/
 
 ## Install open vpn on cluster
-- ``helm install stable/openvpn --namespace "default"``
+- ``helm install stable/openvpn --namespace "default" -g --set service.type=NodePort``
+  - NOTE: i am setting `service.type=NodePort` because i dont think i need load balancer for 1 pod :)
   - You can also set it up in its own namespace and use `externalName` to expose services to its namespace
   - You can do that by adding another service that exposes the original service
     - https://github.com/howtoclient/nodejs-hello/blob/master/k8s-template/service-external.yml
